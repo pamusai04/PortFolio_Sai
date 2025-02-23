@@ -168,6 +168,7 @@ section {
     width: 100%;
     display: flex;
     flex-wrap: wrap-reverse;
+    overflow: hidden;
 }
 
 .left-container {
@@ -181,7 +182,7 @@ section {
     border-right: 3px solid #fff;
     display: inline-block; 
     max-width: fit-content; 
-    animation: typing 10s steps(50) infinite, blink 0.6s step-end infinite;
+    animation: typing 10s steps(40) infinite, blink 0.6s step-end infinite;
 }
 
 .text span {
@@ -251,6 +252,9 @@ section {
     border: 3px solid #F01DD4;
     background-color: #ffffff;
 }   
+.hire-btn a{
+    text-decoration: none;
+}
 
 .cta-buttons .resume-btn:hover{
     border: 3px solid #f39c12;
@@ -337,6 +341,7 @@ section {
 
 
 
+
 /* Skills Section */
 #skills {     
     background: linear-gradient(132.96deg, #0B0A0A 27.52%, #272323 84.97%);
@@ -413,7 +418,6 @@ section {
     margin-top: 10px;
 }
 
-
 @keyframes typing {
     0% {
         width: 0;
@@ -431,16 +435,30 @@ section {
         flex-direction: column;
     }
     .info-section h1{
-        font-size:1.8rem;
+        font-size:1rem;
     }
     .info-section p{
         font-size:1rem;
         font-weight: bold;
         color: #FFF;
     }
+
+    .cta-buttons .resume-btn, 
+    .cta-buttons .hire-btn {
+        margin: 10px;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.5s ease;
+    }
     
 
 }
+
+
 
 @media (min-width: 481px) {
     .info-section h1{
@@ -525,6 +543,8 @@ section {
         transform: scale(1.1);
         transition-duration: 0.5s;
     }
+
+    
     
 }
 
