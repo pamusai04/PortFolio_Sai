@@ -5,6 +5,10 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 12vh
+}
 
 nav {
     background-color: #272323;
@@ -151,11 +155,6 @@ nav ul li a:hover::after {
     }
 }
 
-
-
-section {
-    scroll-margin-top: 12vh; 
-}
 /* main  */
 .home-section {
     margin-top: 11vh;
@@ -182,7 +181,7 @@ section {
     border-right: 3px solid #fff;
     display: inline-block; 
     max-width: fit-content; 
-    animation: typing 10s steps(40) infinite, blink 0.6s step-end infinite;
+    animation: typing 10s steps(30) infinite, blink 0.6s step-end infinite;
 }
 
 .text span {
@@ -230,9 +229,12 @@ section {
     display: flex;
     flex-wrap: wrap;
 }
+.cta-buttons a{
+    text-decoration: none;
+}
 
-.cta-buttons .resume-btn, 
-.cta-buttons .hire-btn {
+.cta-buttons a .resume-btn, 
+.cta-buttons a .hire-btn {
     margin: 10px;
     padding: 15px 40px;
     border: none;
@@ -242,26 +244,18 @@ section {
     font-weight: bold;
     transition: all 0.5s ease;
 }
-.cta-buttons .resume-btn{
-    background-color: #FBCE1F;
+.cta-buttons a .resume-btn{
+    background-color: #F01DD4;
     color: white;
-    border: 3px solid #F01DD4;
+    border: 3px solid white;
+    
 }
-.cta-buttons .hire-btn{
-    color: #f39c12;
-    border: 3px solid #F01DD4;
+.cta-buttons a .hire-btn{
+    color: #F01DD4;
     background-color: #ffffff;
+    padding: 17px 45px;
+
 }   
-.hire-btn a{
-    text-decoration: none;
-}
-
-.cta-buttons .resume-btn:hover{
-    border: 3px solid #f39c12;
-    background-color: #fff;
-    color: #FBCE1F;
-}
-
 .right-container {
     flex: 1;
     display: flex;
@@ -337,9 +331,6 @@ section {
 .bubble:nth-child(14) { left: 35%; width: 14px; height: 14px; animation-duration: 6.3s; }
 .bubble:nth-child(15) { left: 45%; width: 27px; height: 27px; animation-duration: 5.4s; }
 .bubble:nth-child(16) { left: 55%; width: 16px; height: 16px; animation-duration: 6.7s; }
-
-
-
 
 
 /* Skills Section */
@@ -632,6 +623,9 @@ section {
     background-color: #FBCE1F;
     padding: 10px 30px;
 }
+.access a{
+    text-decoration: none;
+}
 
 .card-container {
     position: relative;
@@ -765,11 +759,12 @@ section {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+   
 }
 
 .contact .section-heading h3 {
     color: white;
-    font-size: 32px;
+    font-size:48px;
     padding-bottom: 20px;
 }
 
@@ -777,26 +772,21 @@ section {
     color: #FF8A00;
 }
 
-.contact-headding {
+.contact-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 40px; 
     padding-bottom: 30px;
-    max-width: 900px;
     margin: auto;
+    width: 100%;
 }
 
-.show-img-bg, .sending-information {
-    flex: 1;
+.mail-img {
     
-}
-
-.contact-headding h3 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #FFF;
+    max-width: 600px; 
+    height: auto;
+    width: 100%;
 }
 
 .sending-information {
@@ -806,8 +796,9 @@ section {
     box-shadow: 0 4px 15px 5px rgba(173, 216, 230, 0.5);
     transition: all 0.3s ease-in-out;
     width: 100%; 
-    max-width: 600px; 
+    max-width: 700px; 
     box-sizing: border-box;
+
 }
 
 .inputs1 {
@@ -815,6 +806,7 @@ section {
     flex-wrap: wrap;
     gap: 15px;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -832,7 +824,6 @@ form {
     min-width: 180px;
 }
 
-
 .textAreas textarea {
     width: 100%;
     height: 180px;
@@ -843,29 +834,14 @@ form {
     color: #FF8A00;
     font-size: 18px; 
 }
+
 button {
     background: lightblue;
     color: #fff;
     padding: 14px 30px; 
-    font-size: 20px; /* Larger button text */
+    font-size: 20px; 
     border-radius: 30px;
-}
-
-.inputs1 input::placeholder,
-.textAreas textarea::placeholder {
-    color: #FF8A00; 
-    opacity: 0.8;
-}
-
-
-
-button {
-    background: lightblue;
-    color: #fff;
-    padding: 12px 25px;
-    font-size: 18px;
     border: none;
-    border-radius: 25px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease-in-out;
@@ -879,61 +855,28 @@ button:hover {
     background: #645CBB;
 }
 
+.inputs1 input::placeholder,
+.textAreas textarea::placeholder {
+    color: #FF8A00; 
+    opacity: 0.8;
+}
 
-@media (max-width: 768px) {
-    .contact {
-        padding: 20px;
-    }
-
-    .contact-headding {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px; /* Adds spacing for mobile layout */
-    }
-
-    .show-img-bg, .sending-information {
-        max-width: 100%;
-    }
-
-    .mail-img {
-        height: 360px;
-        width: auto;
-    }
-
-    .show-img:hover {
-        background-color: #FF8A00;
-        border-radius: 20px;
-        box-shadow: 0px 0px 2px 2px #002057;
-    }
-
-    .sending-information {
-        width: 100%;
-        padding: 25px; 
+@media (max-width:768px) {
+    .contact-container {
+        flex-wrap: wrap;
+        
     }
 }
 
-@media (max-width: 480px) {
-    .contact-headding {
-        width: 100%;
-        gap: 20px; 
-    }
-
-    .mail-img {
-        height: 320px;
-    }
-
-    .sending-information {
-        height: auto;
-        width: 100%;
-        padding: 20px; /* Adjusted padding for better spacing */
+@media (max-width:480px) {
+    .contact .section-heading h3 {
+        font-size:24px;
     }
 }
-
-
-
-
 
 /* footer  */
+
+
 
 .footer-container{
     height: 25vh;
