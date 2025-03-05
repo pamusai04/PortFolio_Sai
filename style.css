@@ -951,7 +951,6 @@ button:hover {
         font-size: 13px;
     }
 }
-
 @media (min-width: 481px) and (max-width:768px){
     
     .info-section h1{
@@ -1150,11 +1149,12 @@ button:hover {
         height: 200px;
     }
 }
+
 @media (min-width:1025px) { 
     
     .project-card {
         padding: 10px;
-        width: 450px;
+        width: 470px;
         height: 640px;
         display: flex;
         flex-direction: column;
