@@ -1095,23 +1095,6 @@ button:hover {
     opacity: 0.8;
 }
 
-/* ✅ Tablet & Larger Devices */
-@media (min-width:648px) {
-    .contact-container {
-        flex-direction: row; /* Keep Row Layout */
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-
-    }
-
-    .mail-img {
-        max-width: 35%;
-    }
-
-    .sending-information {
-        max-width: 45%;
-    }
-}
 
 @media (max-width: 767px) {
     
