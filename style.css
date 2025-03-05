@@ -359,6 +359,7 @@ nav ul li a:hover::after {
     justify-content: space-around;
     padding-top: 20px;
     position: relative; 
+    gap: 10px;
 }
 
 .border-top-right,
@@ -1028,8 +1029,8 @@ button:hover {
         font-size: 1.5rem;
     }
     .box {
-        height: 170px;
-        width: 210px;
+        height: 150px;
+        width: 190px;
     }
     .box p {
         font-size: 14px;
